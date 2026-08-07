@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracking the Campus Shuttle — UX Research Case Study</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">UX Research Case Study &middot; Midterm Project</p>
+    <h1>Tracking the Campus Shuttle</h1>
+    <p class="subtitle">
+      An end-to-end UX research process — from empathy and observation to
+      information architecture and prioritization — for one of the most
+      common broken experiences on campus: not knowing when the shuttle
+      will arrive.
+    </p>
+    <div class="meta">
+      <span><strong>Student:</strong> Parth Bhirwandekar</span>
+      <span><strong>Program:</strong> B.Tech AI &amp; ML, Vijaybhoomi University</span>
+      <span><strong>Problem Space:</strong> Campus Shuttle Commute</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="phase" id="phase-1">
+    <div class="phase-inner">
+
+      <div class="phase-head">
+        <p class="phase-eyebrow">Phase 1</p>
+        <h2>Empathy &amp; Definition</h2>
+        <p class="phase-desc">
+          Before proposing anything, the goal here was to understand the
+          user's world as it actually is — starting with assumptions,
+          then replacing them with real observation and real conversations.
+        </p>
+      </div>
+
+      <article class="step" id="proto-persona">
+        <p class="step-label">Step 1</p>
+        <h3>Proto-Persona</h3>
+        <div class="card">
+          <div class="field">
+            <p class="field-label">Name</p>
+            <p>Aaryan</p>
+          </div>
+          <div class="field">
+            <p class="field-label">Background</p>
+            <p>Aaryan is a B.Tech student at Vijaybhoomi University. He takes the college shuttle bus every day.</p>
+          </div>
+          <div class="field">
+            <p class="field-label">Goals</p>
+            <ul>
+              <li>Get to campus on time for lectures and exams.</li>
+              <li>Catch his train on time when going back home.</li>
+            </ul>
+          </div>
+          <div class="field">
+            <p class="field-label">Assumed Current Behaviour</p>
+            <p>Aaryan thinks the bus usually comes between 8:00–8:15 AM and leaves by 8:20 AM. But this isn't fixed — the bus doesn't always follow this timing.</p>
+          </div>
+          <div class="field">
+            <p class="field-label">Frustrations</p>
+            <ul>
+              <li>He has to stand at the bus stop for 15–20 minutes every day without knowing when the bus will actually show up.</li>
+              <li>Because the timing is unpredictable, he's often late for lectures and exams.</li>
+              <li>He also risks missing his train on the way back home.</li>
+            </ul>
+          </div>
+          <div class="field">
+            <p class="field-label">Quote</p>
+            <blockquote class="quote">
+              "I never know exactly when the bus will arrive, so I end up either waiting or worrying about being late."
+            </blockquote>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="observation-log">
+        <p class="step-label">Step 2</p>
+        <h3>Observation Log</h3>
+        <div class="card">
+          <div class="meta-row">
+            <span><strong>Location:</strong> Campus bus stop</span>
+            <span><strong>Time:</strong> 8:00 AM – 8:30 AM</span>
+          </div>
+          <div class="field">
+            <p class="field-label">What Was Observed</p>
+            <ul>
+              <li>The student reaches the stop at 8:00 AM.</li>
+              <li>He checks his phone again and again.</li>
+              <li>He keeps looking down the road to see if the bus is coming.</li>
+              <li>At 8:15 AM, he makes a phone call.</li>
+              <li>The bus arrives at 8:20 AM.</li>
+              <li>He boards the bus quickly.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="interview-notes">
+        <p class="step-label">Step 3</p>
+        <h3>Interview Notes</h3>
+        <div class="card">
+          <div class="field">
+            <p class="field-label">Raw Responses From 3 Real Students</p>
+            <ol class="interview-list">
+              <li>"There is no fixed arrival time; the bus often arrives either early or late."</li>
+              <li>"Sometimes the bus leaves campus late. One student missed their train and had to wait 30 mins for the next train."</li>
+              <li>"There is limited space for seating and luggage on the bus, as it is shared by faculty members, admin staff, and students."</li>
+              <li>"Sometimes the bus changes, which results in lack of seating due to difference in seating capacity between buses."</li>
+              <li>"Most of the seats are occupied by staff; only a few seats are available for students."</li>
+              <li>"The price is too high compared to local buses, since there is no difference in the quality or service between the two."</li>
+              <li>"Students feel there should be separate buses for students and college staff."</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="user-persona">
+        <p class="step-label">Step 4</p>
+        <h3>Real User Persona</h3>
+        <div class="card">
+          <div class="field-grid">
+            <div class="field">
+              <p class="field-label">Name</p>
+              <p>Aaryan</p>
+            </div>
+            <div class="field">
+              <p class="field-label">Role</p>
+              <p>B.Tech student at Vijaybhoomi University, commutes daily via the campus shuttle.</p>
+            </div>
+          </div>
+          <div class="field">
+            <p class="field-label">Goals</p>
+            <ul>
+              <li>Reach campus on time for lectures and exams.</li>
+              <li>Catch the connecting train on time while returning home.</li>
+            </ul>
+          </div>
+          <div class="field">
+            <p class="field-label">Observed Behaviour</p>
+            <ul>
+              <li>Arrives at the bus stop early, waits without any confirmed timing.</li>
+              <li>Checks phone repeatedly while waiting.</li>
+              <li>Sometimes calls a friend to ask about the bus's location.</li>
+            </ul>
+          </div>
+          <div class="field">
+            <p class="field-label">Facts Gathered</p>
+            <ul>
+              <li>No fixed arrival/departure time for the shuttle.</li>
+              <li>A missed shuttle connection has caused at least one student to miss a train, resulting in a 30-minute wait.</li>
+              <li>The shuttle is shared with faculty and admin staff, resulting in limited seating.</li>
+              <li>Seating capacity differs between buses, sometimes forcing students to stand.</li>
+              <li>Shuttle cost is seen as high relative to local buses.</li>
+              <li>Students have expressed a preference for separate buses for students and staff.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
