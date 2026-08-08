@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tracking the Campus Shuttle — UX Research Case Study</title>
+<title>Tracking Campus Shuttle — UX Research Case Study</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">UX Research Case Study &middot; Midterm Project</p>
-    <h1>Tracking the Campus Shuttle</h1>
+    <p class="eyebrow">UX Midterm</p>
+    <h1>Tracking Campus Shuttle</h1>
     <p class="subtitle">
       An end-to-end UX research process — from empathy and observation to
       information architecture and prioritization — for one of the most
@@ -19,9 +19,6 @@
       will arrive.
     </p>
     <div class="meta">
-      <span><strong>Student:</strong> Parth Bhirwandekar</span>
-      <span><strong>Program:</strong> B.Tech AI &amp; ML, Vijaybhoomi University</span>
-      <span><strong>Problem Space:</strong> Campus Shuttle Commute</span>
     </div>
   </div>
 </header>
@@ -164,6 +161,555 @@
           </div>
         </div>
       </article>
+
+      <article class="step" id="empathy-map">
+        <p class="step-label">Step 5</p>
+        <h3>Empathy Map</h3>
+        <div class="card">
+          <img
+            src="empathy-map.png"
+            alt="Empathy map for Aaryan showing four quadrants: Says (direct quotes about unpredictable bus timing and limited space), Thinks (uncertainty about waiting, worry about being late for exams), Does (arrives early, checks phone repeatedly, calls a friend for updates), and Feels (anxious while waiting, frustrated by relying on informal methods, mildly resentful about cost)."
+            class="map-image"
+          >
+          <p class="map-caption">Empathy Map — built from real observation and interview data</p>
+        </div>
+      </article>
+
+      <article class="step" id="journey-map">
+        <p class="step-label">Step 6</p>
+        <h3>User Journey Map + Emotion Line</h3>
+        <div class="card">
+          <img
+            src="journey-map.png"
+            alt="User journey map across three phases of Aaryan's day: Morning Wait (7:45-8:30 AM) showing anxious waiting with no confirmed bus timing, At Campus (9:00 AM-4:30 PM) showing temporary relief during lectures, and Evening Departure (4:45-6:00 PM) showing rising urgency about catching the train. The emotion line starts low, rises through the campus phase, and dips again during the evening departure."
+            class="map-image"
+          >
+          <p class="map-caption">User Journey Map — emotional line dips lowest during the Morning Wait and dips again in the Evening Departure</p>
+        </div>
+      </article>
+
+
+      <article class="step" id="pain-point">
+        <p class="step-label">Step 7</p>
+        <h3>Core Pain Point</h3>
+        <div class="pain-point">
+          "Students have no reliable way to know the campus shuttle's real-time location or arrival time, forcing them to wait blindly at the bus stop or depend on informal methods like calling a friend, causing daily anxiety and repeated lateness to lectures, exams, and trains."
+        </div>
+      </article>
+
+      <article class="step" id="user-stories">
+        <p class="step-label">Step 8</p>
+        <h3>User Stories</h3>
+        <ul class="story-list">
+          <li>
+            <span class="as-a">As a student waiting for the shuttle</span>
+            I want to see the bus's real-time location, so that I know exactly how long I need to wait instead of guessing.
+          </li>
+          <li>
+            <span class="as-a">As a student planning my morning</span>
+            I want an estimated arrival time for the shuttle, so that I can decide when to leave without wasting time standing at the stop.
+          </li>
+          <li>
+            <span class="as-a">As a student catching a connecting train</span>
+            I want to be notified if the shuttle is delayed or cancelled, so that I can adjust my plans in advance.
+          </li>
+        </ul>
+      </article>
+
+
+      <section class="phase" id="phase-2">
+    <div class="phase-inner">
+
+      <div class="phase-head">
+        <p class="phase-eyebrow">Phase 2</p>
+        <h2>Ideate &amp; Evaluate</h2>
+        <p class="phase-desc">
+          With the pain point and user stories in hand, this phase turns
+          understanding into structure — brainstorming features, testing
+          how real students naturally group them, and building a menu
+          structure validated by actual navigation behaviour.
+        </p>
+      </div>
+
+      <article class="step" id="feature-list">
+        <p class="step-label">Step 1</p>
+        <h3>Feature List</h3>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h4>Tracking &amp; Info</h4>
+            <ol>
+              <li>Live bus location and estimated time of arrival at any stop.</li>
+              <li>Seat occupancy status (which seats are occupied vs. available).</li>
+              <li>Nearest stop finder, so students can board from any nearby stop to save time.</li>
+              <li>Daily bus schedule or timetable.</li>
+            </ol>
+          </div>
+          <div class="feature-card">
+            <h4>Notifications &amp; Alerts</h4>
+            <ol start="5">
+              <li>Notifications when the bus is near the stop, or if there's a delay or cancellation.</li>
+              <li>Departure reminder notification, sent shortly before the student needs to leave to catch the bus.</li>
+            </ol>
+          </div>
+          <div class="feature-card">
+            <h4>Payments</h4>
+            <ol start="7">
+              <li>In-app payment method, so there's no time wasted paying manually.</li>
+              <li>Monthly pass purchase/renewal within the app.</li>
+            </ol>
+          </div>
+          <div class="feature-card">
+            <h4>Support</h4>
+            <ol start="9">
+              <li>Request to the driver or bus in-charge to wait a few extra minutes if a student is running late.</li>
+              <li>Contact the bus driver or in-charge directly for emergencies.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="card-sort">
+        <p class="step-label">Step 2</p>
+        <h3>Card Sort — Patterns Found</h3>
+        <p>Tested the 10 features with 10 real students, asking each of them to group the features into categories that made sense to them. Here's what was found:</p>
+
+        <div class="pattern-list">
+          <div class="pattern-item">
+            <h4><span class="badge badge-strong">10/10</span>Payments always stood alone</h4>
+            <p>All 10 people grouped "In-app payment" and "Monthly pass" together, separate from everything else. Students clearly see payment-related things as their own topic, unrelated to tracking or notifications.</p>
+          </div>
+          <div class="pattern-item">
+            <h4><span class="badge badge-strong">10/10</span>Driver Support always stood alone</h4>
+            <p>All 10 people also grouped "Request driver to wait" and "Contact driver for emergency" together, separately from the other features — both are about directly reaching out to the driver, not checking information.</p>
+          </div>
+          <div class="pattern-item">
+            <h4><span class="badge badge-strong">8/10</span>Core tracking features clustered together</h4>
+            <p>"Live bus location," "Seat occupancy," and "Nearest stop finder" were grouped together by most students. They think of these three as answering the same basic question — where is the bus, and can I get on it?</p>
+          </div>
+          <div class="pattern-item">
+            <h4><span class="badge badge-split">2/10 disagreed</span>Where does "Daily Schedule" belong?</h4>
+            <p>8 out of 10 people put "Daily schedule" with the tracking features, but 2 grouped it with notifications instead — since a schedule can feel like "bus info" or like "a reminder for when to leave." The majority view was used for the final structure.</p>
+          </div>
+          <div class="pattern-item">
+            <h4><span class="badge badge-split">2/10 disagreed</span>Where does "Seat Occupancy" belong?</h4>
+            <p>Most people grouped "Seat occupancy" with tracking, but 2 people grouped it with notifications, thinking of it more as "get told if a seat opens up" rather than "check bus info."</p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <strong>Overall Takeaway</strong>
+          All 10 students naturally created about 4 groups on their own, without being told to. This showed the feature list already had a clear, natural structure — students think of the app in terms of "tracking the bus," "getting notified," "paying," and "talking to the driver." This structure was used to directly build the app's first menu (V1 IA).
+        </div>
+
+        <details class="raw-data">
+          <summary>View raw data — all 10 participant groupings</summary>
+
+          <div class="participant-block">
+            <h5>Participant 1 — Communication and Support / Accessibility / Boarding / Payment</h5>
+            <p class="cat-name">Communication and Support</p>
+            <ul><li>Request driver to wait a few extra minutes if running late</li><li>Contact bus driver/in-charge for emergencies</li></ul>
+            <p class="cat-name">Accessibility</p>
+            <ul><li>Nearest stop finder</li><li>Live bus location and ETA</li><li>Daily bus schedule and timetable</li></ul>
+            <p class="cat-name">Boarding</p>
+            <ul><li>Seat occupancy status</li><li>Departure reminder notification</li><li>Notification when bus is near stop or delay/cancellation</li></ul>
+            <p class="cat-name">Payment</p>
+            <ul><li>In-app payment method</li><li>Monthly pass renewal/payment</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 2 — Convenience / Payment / Emergency Requests / Reminders</h5>
+            <p class="cat-name">Convenience</p>
+            <ul><li>Live bus location and ETA</li><li>Nearest stop finder</li><li>Daily bus schedule</li><li>Seat occupancy status</li></ul>
+            <p class="cat-name">Payment</p>
+            <ul><li>In-app payment method</li><li>Monthly pass purchase/renewal</li></ul>
+            <p class="cat-name">Emergency / Emergency Requests</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+            <p class="cat-name">Reminders / Notifications</p>
+            <ul><li>Notifications when bus is near stop or delay/cancellation</li><li>Departure reminder notification</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 3 — Communication and Support / Accessibility / Boarding / Payment</h5>
+            <p class="cat-name">Communication and Support</p>
+            <ul><li>Request driver to wait a few extra minutes if running late</li><li>Contact bus driver/in-charge for emergencies</li></ul>
+            <p class="cat-name">Accessibility</p>
+            <ul><li>Nearest stop finder</li><li>Live bus location and ETA</li><li>Daily bus schedule and timetable</li></ul>
+            <p class="cat-name">Boarding</p>
+            <ul><li>Seat occupancy status</li><li>Departure reminder notification</li><li>Notification when bus is near stop or delay/cancellation</li></ul>
+            <p class="cat-name">Payment</p>
+            <ul><li>In-app payment method</li><li>Monthly pass renewal/payment</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 4 — Communication and Support / Bus Tracking &amp; Navigation / Schedule &amp; Alerts / Tickets &amp; Payments</h5>
+            <p class="cat-name">Communication and Support</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+            <p class="cat-name">Bus Tracking &amp; Navigation</p>
+            <ul><li>Live bus location and ETA</li><li>Seat occupancy status</li><li>Nearest stop finder</li></ul>
+            <p class="cat-name">Schedule &amp; Alerts</p>
+            <ul><li>Daily bus schedule</li><li>Notifications for delay/cancellation</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Tickets &amp; Payments</p>
+            <ul><li>In-app payment method</li><li>Monthly pass purchase/renewal</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 5 — Real-Time Tracking &amp; Availability / Schedules &amp; Alerts / Payments &amp; Passes / Driver Communication &amp; Support</h5>
+            <p class="cat-name">Real-Time Tracking &amp; Availability</p>
+            <ul><li>Live bus location and ETA</li><li>Seat occupancy status</li><li>Nearest stop finder</li></ul>
+            <p class="cat-name">Schedules &amp; Alerts</p>
+            <ul><li>Daily bus schedule</li><li>Notifications for delay/cancellation</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Payments &amp; Passes</p>
+            <ul><li>In-app payment method</li><li>Monthly pass purchase/renewal</li></ul>
+            <p class="cat-name">Driver Communication &amp; Support</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 6 — Search &amp; Find / Messages &amp; Schedule / Payments / Contact &amp; Support</h5>
+            <p class="cat-name">Search &amp; Find</p>
+            <ul><li>Live bus location and ETA</li><li>Seat occupancy status</li><li>Nearest stop finder</li></ul>
+            <p class="cat-name">Messages &amp; Schedule</p>
+            <ul><li>Daily bus schedule</li><li>Notifications for delay/cancellation</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Payments</p>
+            <ul><li>In-app payment method</li><li>Monthly pass purchase/renewal</li></ul>
+            <p class="cat-name">Contact &amp; Support</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 7 — Track / Settings / Finance / Contact</h5>
+            <p class="cat-name">Track</p>
+            <ul><li>Live bus location and ETA</li><li>Seat occupancy status</li><li>Nearest stop finder</li><li>Daily bus schedule</li></ul>
+            <p class="cat-name">Settings</p>
+            <ul><li>Notifications for delay/cancellation</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Finance</p>
+            <ul><li>In-app payment method</li><li>Monthly pass purchase/renewal</li></ul>
+            <p class="cat-name">Contact</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 8 — Bus Tracking &amp; Navigation / Notifications &amp; Alerts / Tickets &amp; Payments / Communication &amp; Assistance</h5>
+            <p class="cat-name">Bus Tracking &amp; Navigation</p>
+            <ul><li>Live bus location and ETA</li><li>Seat occupancy status</li><li>Nearest stop finder</li><li>Daily bus schedule</li></ul>
+            <p class="cat-name">Notifications &amp; Alerts</p>
+            <ul><li>Bus near-stop notification</li><li>Delay/cancellation notification</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Tickets &amp; Payments</p>
+            <ul><li>In-app payment</li><li>Monthly pass purchase/renewal</li></ul>
+            <p class="cat-name">Communication &amp; Assistance</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 9 — Bus Tracking &amp; Status / Notifications &amp; Alerts / Tickets &amp; Payments / Driver Communication &amp; Assistance</h5>
+            <p class="cat-name">Bus Tracking &amp; Status</p>
+            <ul><li>Live bus location and ETA</li><li>Seat occupancy status</li><li>Nearest stop finder</li><li>Daily bus schedule</li></ul>
+            <p class="cat-name">Notifications &amp; Alerts</p>
+            <ul><li>Notifications for delay/cancellation</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Tickets &amp; Payments</p>
+            <ul><li>In-app payment method</li><li>Monthly pass purchase/renewal</li></ul>
+            <p class="cat-name">Driver Communication &amp; Assistance</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Participant 10 — Bus Tracking &amp; Navigation / Notifications &amp; Alerts / Payments &amp; Pass Management / Support &amp; Communication</h5>
+            <p class="cat-name">Bus Tracking &amp; Navigation</p>
+            <ul><li>Live bus location and ETA</li><li>Real-time seat occupancy status</li><li>Nearest stop finder</li><li>Daily bus schedule</li></ul>
+            <p class="cat-name">Notifications &amp; Alerts</p>
+            <ul><li>Notifications for approaching stop or delay/cancellation</li><li>Departure reminder notification</li></ul>
+            <p class="cat-name">Payments &amp; Pass Management</p>
+            <ul><li>In-app payment for bus fares</li><li>Monthly bus pass purchase and renewal</li></ul>
+            <p class="cat-name">Support &amp; Communication</p>
+            <ul><li>Request driver to wait</li><li>Contact driver for emergencies</li></ul>
+          </div>
+
+        </details>
+      </article>
+
+      <article class="step" id="v1-ia">
+        <p class="step-label">Step 3</p>
+        <h3>V1 Information Architecture</h3>
+        <p>Built directly from the majority patterns found in the Card Sort above.</p>
+        <div class="ia-tree">
+          <div class="ia-branch">
+            <div class="ia-branch-head">Bus Tracking &amp; Schedule</div>
+            <ul>
+              <li>Live Bus Location &amp; ETA</li>
+              <li>Seat Occupancy Status</li>
+              <li>Nearest Stop Finder</li>
+              <li>Daily Bus Schedule/Timetable</li>
+            </ul>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">Notifications &amp; Alerts</div>
+            <ul>
+              <li>Bus Near Stop / Delay / Cancellation Alerts</li>
+              <li>Departure Reminder</li>
+            </ul>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">Payments &amp; Passes</div>
+            <ul>
+              <li>In-App Payment</li>
+              <li>Monthly Pass Purchase/Renewal</li>
+            </ul>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">Support &amp; Communication</div>
+            <ul>
+              <li>Request Driver to Wait</li>
+              <li>Contact Driver for Emergency</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="tree-test">
+        <p class="step-label">Step 4</p>
+        <h3>Tree Test</h3>
+        <p>6 students were shown the V1 IA and asked, in plain everyday language, where they would go to complete a task — without being shown multiple-choice options.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Task</th><th>Expected Path</th><th>Result</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Know bus arrival time</td><td>Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA</td><td class="result-pass">6/6 correct</td></tr>
+            <tr><td>Check seat availability</td><td>Bus Tracking &amp; Schedule → Seat Occupancy Status</td><td class="result-fail">5/6 correct</td></tr>
+            <tr><td>View tomorrow's timetable</td><td>Bus Tracking &amp; Schedule → Daily Bus Schedule/Timetable</td><td class="result-fail">5/6 correct</td></tr>
+            <tr><td>Ask driver to wait</td><td>Support &amp; Communication → Request Driver to Wait</td><td class="result-fail">5/6 correct</td></tr>
+            <tr><td>Get departure reminder</td><td>Notifications &amp; Alerts → Departure Reminder</td><td class="result-fail">5/6 correct</td></tr>
+          </tbody>
+        </table>
+        <p style="color: var(--muted); font-size: 0.9rem;">Overall: 26 out of 30 answers correct (87%).</p>
+
+        <details class="raw-data">
+          <summary>View raw data — all 6 student transcripts</summary>
+
+          <div class="participant-block">
+            <h5>Student 1</h5>
+            <ul class="transcript">
+              <li>Arrival time → Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA</li>
+              <li>Free seat → Bus Tracking &amp; Schedule → Seat Occupancy Status</li>
+              <li>Tomorrow's timetable → Bus Tracking &amp; Schedule → Daily Bus Schedule/Timetable</li>
+              <li>Ask driver to wait → Support &amp; Communication → Request Driver to Wait</li>
+              <li>Departure reminder → Notifications &amp; Alerts → Departure Reminder</li>
+            </ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Student 2</h5>
+            <ul class="transcript">
+              <li>Arrival time → Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA</li>
+              <li>Free seat → Bus Tracking &amp; Schedule → Seat Occupancy Status</li>
+              <li>Tomorrow's timetable → Bus Tracking &amp; Schedule → Daily Bus Schedule/Timetable</li>
+              <li><strong>Ask driver to wait → Notifications &amp; Alerts → Delay/Cancellation Alerts (incorrect)</strong></li>
+              <li>Departure reminder → Notifications &amp; Alerts → Departure Reminder</li>
+            </ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Student 3</h5>
+            <ul class="transcript">
+              <li>Arrival time → Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA</li>
+              <li>Free seat → Bus Tracking &amp; Schedule → Seat Occupancy Status</li>
+              <li><strong>Tomorrow's timetable → Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA (incorrect)</strong></li>
+              <li>Ask driver to wait → Support &amp; Communication → Request Driver to Wait</li>
+              <li>Departure reminder → Notifications &amp; Alerts → Departure Reminder</li>
+            </ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Student 4</h5>
+            <ul class="transcript">
+              <li>Arrival time → Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA</li>
+              <li>Free seat → Bus Tracking &amp; Schedule → Seat Occupancy Status</li>
+              <li>Tomorrow's timetable → Bus Tracking &amp; Schedule → Daily Bus Schedule/Timetable</li>
+              <li>Ask driver to wait → Support &amp; Communication → Request Driver to Wait</li>
+              <li><strong>Departure reminder → Notifications &amp; Alerts → Delay/Cancellation Alerts (incorrect)</strong></li>
+            </ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Student 5</h5>
+            <ul class="transcript">
+              <li>Arrival time → Live Bus Location &amp; ETA</li>
+              <li><strong>Free seat → Nearest Stop Finder (incorrect)</strong></li>
+              <li>Tomorrow's timetable → Daily Bus Schedule/Timetable</li>
+              <li>Ask driver to wait → Request Driver to Wait</li>
+              <li>Departure reminder → Departure Reminder</li>
+            </ul>
+          </div>
+
+          <div class="participant-block">
+            <h5>Student 6</h5>
+            <ul class="transcript">
+              <li>Arrival time → Bus Tracking &amp; Schedule → Live Bus Location &amp; ETA</li>
+              <li>Free seat → Bus Tracking &amp; Schedule → Seat Occupancy Status</li>
+              <li>Tomorrow's timetable → Bus Tracking &amp; Schedule → Daily Bus Schedule/Timetable</li>
+              <li>Ask driver to wait → Support &amp; Communication → Request Driver to Wait</li>
+              <li>Departure reminder → Notifications &amp; Alerts → Departure Reminder</li>
+            </ul>
+          </div>
+
+        </details>
+      </article>
+
+      <article class="step" id="tree-test-analysis">
+        <p class="step-label">Step 5</p>
+        <h3>Failure Analysis</h3>
+        <div class="pattern-list">
+          <div class="pattern-item">
+            <h4>Minor mix-ups within Bus Tracking &amp; Schedule</h4>
+            <p>Two students confused "Seat Occupancy" and "Daily Schedule" with "Live Bus Location." All three feel like "checking bus info," so students sometimes clicked the first tracking-related option instead of the exact right one. This is a small mix-up — all three options were still in the correct category.</p>
+          </div>
+          <div class="pattern-item">
+            <h4>The important one: passive vs. active confusion</h4>
+            <p>One student picked "Notifications &amp; Alerts" instead of "Support &amp; Communication" when asked how to ask the driver to wait. This revealed a real mental-model gap: getting told something by the app (like a delay alert) is <em>passive</em> — the app is informing you. Asking the driver to do something is <em>active</em> — the user is making a request. Both felt like "app notifications" to this student, so the difference between "the app talking to me" and "me talking to the driver" wasn't clear.</p>
+          </div>
+          <div class="pattern-item">
+            <h4>Minor overlap between two notification types</h4>
+            <p>One student mixed up "Delay Alerts" with "Departure Reminder." Both are notifications, so this is a small labelling overlap, not a bigger structural problem.</p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <strong>What Changed — V1 → V2</strong>
+          To fix the main issue (the driver-request confusion), two labels were renamed to make their meaning clearer: "Request Driver to Wait" became <strong>"Ask Driver to Wait for Me"</strong> (making clear this is something the user actively does), and "Delay/Cancellation Alerts" became <strong>"Bus Delay/Cancellation Notice"</strong> (making clear this is information coming from the app, not an action).
+        </div>
+      </article>
+
+      <article class="step" id="v2-ia">
+        <p class="step-label">Step 6</p>
+        <h3>V2 Information Architecture (Final)</h3>
+        <div class="ia-tree">
+          <div class="ia-branch">
+            <div class="ia-branch-head">Bus Tracking &amp; Schedule</div>
+            <ul>
+              <li>Live Bus Location &amp; ETA</li>
+              <li>Seat Occupancy Status</li>
+              <li>Nearest Stop Finder</li>
+              <li>Daily Bus Schedule/Timetable</li>
+            </ul>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">Notifications &amp; Alerts</div>
+            <ul>
+              <li class="changed">Bus Delay/Cancellation Notice</li>
+              <li>Departure Reminder</li>
+            </ul>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">Payments &amp; Passes</div>
+            <ul>
+              <li>In-App Payment</li>
+              <li>Monthly Pass Purchase/Renewal</li>
+            </ul>
+          </div>
+          <div class="ia-branch">
+            <div class="ia-branch-head">Support &amp; Communication</div>
+            <ul>
+              <li class="changed">Ask Driver to Wait for Me</li>
+              <li>Contact Driver for Emergency</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+
+      <section class="phase" id="phase-3">
+    <div class="phase-inner">
+
+      <div class="phase-head">
+        <p class="phase-eyebrow">Phase 3</p>
+        <h2>Prioritization</h2>
+        <p class="phase-desc">
+          With a validated feature set and structure in place, the final
+          step was deciding what actually gets built first — under the
+          constraint of only four Must-Have features.
+        </p>
+      </div>
+
+      <article class="step" id="moscow">
+        <p class="step-label">Step 1</p>
+        <h3>MoSCoW Categorization</h3>
+        <div class="moscow-grid">
+          <div class="moscow-card moscow-must">
+            <div class="moscow-head">Must-Have</div>
+            <ul>
+              <li>Live bus location and estimated time of arrival at any stop.</li>
+              <li>Daily bus schedule or timetable.</li>
+              <li>Notifications when the bus is near the stop, or if there's a delay or cancellation.</li>
+              <li>Nearest stop finder, so students can board from any nearby stop to save time.</li>
+            </ul>
+          </div>
+          <div class="moscow-card moscow-should">
+            <div class="moscow-head">Should-Have</div>
+            <ul>
+              <li>Request to the driver or bus in-charge to wait a few extra minutes if a student is running late.</li>
+              <li>Monthly pass purchase/renewal within the app.</li>
+            </ul>
+          </div>
+          <div class="moscow-card moscow-could">
+            <div class="moscow-head">Could-Have</div>
+            <ul>
+              <li>Contact the bus driver or in-charge directly for emergencies.</li>
+              <li>In-app payment method, so there's no time wasted paying manually.</li>
+            </ul>
+          </div>
+          <div class="moscow-card moscow-wont">
+            <div class="moscow-head">Won't-Have</div>
+            <ul>
+              <li>Departure reminder notification, sent shortly before the student needs to leave to catch the bus.</li>
+              <li>Seat occupancy status (which seats are occupied vs. available).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="step" id="dfv-matrix">
+        <p class="step-label">Step 2</p>
+        <h3>DFV Matrix</h3>
+        <p>The two features debated hardest for the final Must-Have spot, scored 1–5 on Desirability, Feasibility, and Viability.</p>
+        <table class="data-table dfv-table">
+          <thead>
+            <tr><th>Feature</th><th>Desirability</th><th>Feasibility</th><th>Viability</th><th>Total</th></tr>
+          </thead>
+          <tbody>
+            <tr class="winner">
+              <td>Live bus location and estimated time of arrival at any stop.</td>
+              <td>5</td><td>2.5</td><td>4</td><td class="total">11.5</td>
+            </tr>
+            <tr>
+              <td>Nearest stop finder, so students can board from any nearby stop to save time.</td>
+              <td>3.5</td><td>2.5</td><td>3.5</td><td class="total">9.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
+
+    </div>
+  </section>
+
+    </div>
+  </section>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
 
     </div>
   </section>
