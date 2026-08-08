@@ -71,7 +71,7 @@ button:focus-visible {
    ============================================ */
 
 .hero {
-  padding: 96px 24px 72px;
+  padding: 36px 24px 16px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -118,14 +118,7 @@ button:focus-visible {
 }
 
 .hero .meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--muted);
-  padding-top: 24px;
-  border-top: 1px dashed var(--line);
+  display: none;
 }
 
 .hero .meta strong {
@@ -155,7 +148,7 @@ main::after {
 }
 
 .phase {
-  padding: 72px 24px;
+  padding: 32px 24px 72px;
   position: relative;
 }
 
