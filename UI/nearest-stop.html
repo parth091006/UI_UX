@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Nearest Stop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span id="clock">9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <button class="iconbtn" onclick="window.location.href='home.html'" aria-label="Back to home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Nearest Stop</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="planner">
+      <p class="sec-title">Distance between two stops</p>
+      <input class="pl-input" id="pl-from" list="stop-names" placeholder="Start point (search a stop)">
+      <button class="pl-swap" onclick="swapPlanner('pl-from','pl-to')" aria-label="Swap start and end">&#8645; Swap</button>
+      <input class="pl-input" id="pl-to" list="stop-names" placeholder="End point (search a stop)">
+      <div class="pl-result" id="pl-result">Choose a start and an end point to see the distance.</div>
+    </div>
+    <datalist id="stop-names"></datalist>
+    <p class="sec-title">Distance from a fixed point</p>
+    <div class="toggle-group">
+      <button class="toggle-btn active" data-ref="karjat">From Karjat Station</button>
+      <button class="toggle-btn" data-ref="campus">From Campus</button>
+    </div>
+
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#667085" stroke-width="1.8"/><path d="M21 21l-4-4" stroke="#667085" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input id="stop-search" type="text" placeholder="Search a stop">
+    </div>
+
+    <div class="stop-list">
+      <div class="stop-item" data-name="Karjat Railway Station" data-distance="0">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Karjat Railway Station</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Karjat Bus Stand" data-distance="1.2">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Karjat Bus Stand</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Karjat Phata" data-distance="3.4">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Karjat Phata</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Halivali" data-distance="6.1">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Halivali</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Chowk Road Junction" data-distance="9.8">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Chowk Road Junction</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Ambivali Naka" data-distance="15.2">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Ambivali Naka</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Ambivali Village" data-distance="17.0">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Ambivali Village</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Solpada Dam Road" data-distance="21.5">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Solpada Dam Road</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Jamrung Phata" data-distance="26.3">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Jamrung Phata</p></div>
+        <span class="dist"></span>
+      </div>
+      <div class="stop-item" data-name="Vijaybhoomi University (Main Gate)" data-distance="30.0">
+        <span class="pinwrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <div class="sinfo"><p class="sname">Vijaybhoomi University (Main Gate)</p></div>
+        <span class="dist"></span>
+      </div>
+    </div>
+
+    <p class="empty-hint" id="empty-hint">No stops match your search.</p>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+  initLiveClock('clock');
+  initNearestStopToggle('.toggle-btn', '.stop-list', 30);
+  initRoutePlanner('pl-from','pl-to','pl-result');
+  initStopSearch('stop-search', '.stop-item', 'empty-hint');
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Finding your bus</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span>9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <button class="iconbtn" onclick="window.location.href='home.html'" aria-label="Back to home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Live bus location</p>
+    </div>
+  </div>
+
+  <div class="content" style="flex:1;">
+    <div class="loading-wrap">
+      <div class="spinner" aria-hidden="true"></div>
+      <div>
+        <p class="loading-text">Finding your bus&hellip;</p>
+        <p class="loading-sub">This usually takes a few seconds</p>
+      </div>
+    </div>
+    <p class="footer-note">&nbsp;</p>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>initLoadingRedirect('live-map.html', 'live-map-no-data.html', 1800);</script>
+</body>
+</html>

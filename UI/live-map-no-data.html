@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Live Map</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span id="clock">9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <button class="iconbtn" onclick="window.location.href='home.html'" aria-label="Back to home">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Live Map</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="map-panel dim">
+      <svg viewBox="0 0 360 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="terrain2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#E4E8DC"/>
+            <stop offset="100%" stop-color="#F4F5F1"/>
+          </linearGradient>
+        </defs>
+        <rect width="360" height="300" fill="url(#terrain2)"/>
+        <path d="M250 0 C 270 40, 300 20, 320 55 C 335 78, 355 60, 360 90 L 360 0 Z" fill="#D7DCC6"/>
+        <path d="M290 0 C 305 22, 325 15, 340 40 L 360 40 L 360 0 Z" fill="#CBD2B4"/>
+        <path d="M0 230 C 25 220, 35 245, 55 238 C 70 233, 78 250, 60 262 L 0 262 Z" fill="#D7E4EA"/>
+
+        <path d="M40,200 L52,196.4 L74,189.8 L101,181.7 L138,170.6 L192,154.4 L210,149 L255,135.5 L303,121.1 L340,110" fill="none" stroke="#1B4B66" stroke-width="3.5" stroke-dasharray="1.5 7" stroke-linecap="round"/>
+
+        <circle cx="52" cy="196.4" r="3" fill="#1B4B66"/>
+        <circle cx="74" cy="189.8" r="3" fill="#1B4B66"/>
+        <circle cx="101" cy="181.7" r="3" fill="#1B4B66"/>
+        <circle cx="138" cy="170.6" r="3" fill="#1B4B66"/>
+        <circle cx="210" cy="149" r="3" fill="#1B4B66"/>
+        <circle cx="255" cy="135.5" r="3" fill="#1B4B66"/>
+        <circle cx="303" cy="121.1" r="3" fill="#1B4B66"/>
+
+        <circle cx="40" cy="200" r="6" fill="#1B4B66"/>
+        <circle cx="192" cy="154.4" r="6" fill="#1B4B66"/>
+        <circle cx="340" cy="110" r="6" fill="#1B4B66"/>
+
+        <g transform="translate(332,24)">
+          <path d="M0 -12 L5 4 L0 0 L-5 4 Z" fill="#4A4C46"/>
+          <text x="0" y="16" font-size="9" fill="#4A4C46" text-anchor="middle" font-family="sans-serif">N</text>
+        </g>
+        <g transform="translate(20,278)">
+          <line x1="0" y1="0" x2="60" y2="0" stroke="#4A4C46" stroke-width="1.4"/>
+          <line x1="0" y1="-3" x2="0" y2="3" stroke="#4A4C46" stroke-width="1.4"/>
+          <line x1="60" y1="-3" x2="60" y2="3" stroke="#4A4C46" stroke-width="1.4"/>
+          <text x="0" y="14" font-size="8" fill="#4A4C46" font-family="sans-serif">0</text>
+          <text x="48" y="14" font-size="8" fill="#4A4C46" font-family="sans-serif">30 km</text>
+        </g>
+      </svg>
+      <div class="overlay">
+        <span class="oc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 16V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#667085" stroke-width="1.8"/><path d="M2 2l20 20" stroke="#C2483D" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <p>No buses on this route right now</p>
+      </div>
+    </div>
+    <p style="font-size:12px; color:var(--slate); margin:0 2px;">Karjat Railway Station &rarr; Vijaybhoomi University &middot; ~30 km</p>
+
+    <div class="notice-card">
+      <h3>No data found</h3>
+      <p>There are no buses running on this route currently. Check the daily schedule to see the next available timing.</p>
+    </div>
+
+    <a class="btn btn-primary" href="schedule.html">View daily schedule</a>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>initLiveClock('clock');</script>
+</body>
+</html>

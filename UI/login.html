@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Log in</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span>9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 16V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#fff" stroke-width="1.8"/><path d="M4 12h16" stroke="#fff" stroke-width="1.8"/><circle cx="8" cy="18.5" r="1.4" fill="#fff"/><circle cx="16" cy="18.5" r="1.4" fill="#fff"/></svg>
+    </div>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Campus rides, tracked live</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <form class="content" style="padding:0; gap:16px;" onsubmit="event.preventDefault(); checkLogin(document.getElementById('mobile').value.trim(), document.getElementById('pass').value, '1234567890', 'vushuttle', 'home.html', 'login-error.html');">
+      <div class="field">
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" type="tel" inputmode="numeric" placeholder="Enter your 10-digit number">
+      </div>
+      <div class="field">
+        <label for="pass">Password</label>
+        <input id="pass" type="password" placeholder="Enter your password">
+      </div>
+      <div class="row-between" style="margin-top:-6px;">
+        <span></span>
+        <a class="link-quiet" href="#" onclick="alert('A reset link would be sent to your registered mobile number.'); return false;">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Log in</button>
+
+      <div class="divider-row">or</div>
+
+      <a class="btn btn-secondary" href="home.html">Continue as guest</a>
+    </form>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

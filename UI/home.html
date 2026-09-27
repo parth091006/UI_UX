@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone stage">
+  <div class="statusbar">
+    <span id="clock">9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div id="toast" class="toast">
+    <span class="dot"></span>
+    <span class="tmsg"></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <button class="iconbtn" onclick="alert('Menu: Home · My rides · Settings')" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Where are you headed?</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <a class="live-card" href="loading.html">
+      <div class="lc-main">
+        <p class="lc-tag">&#9679; LIVE NOW</p>
+        <p class="lc-title" id="live-title">Finding bus&hellip;</p>
+        <p class="lc-sub" id="live-sub">&nbsp;</p>
+      </div>
+      <div class="lc-eta" id="live-eta">--</div>
+    </a>
+
+    <p class="sec-title">Explore</p>
+    <div class="feature-list">
+      <a class="feature-row" href="loading.html">
+        <span class="ric"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 16V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#1B4B66" stroke-width="1.8"/><path d="M4 12h16" stroke="#1B4B66" stroke-width="1.8"/><circle cx="8" cy="18.5" r="1.4" fill="#1B4B66"/><circle cx="16" cy="18.5" r="1.4" fill="#1B4B66"/></svg></span>
+        <span class="rlabel">Live bus location</span>
+        <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#667085" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="feature-row" href="schedule.html">
+        <span class="ric"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="#1B4B66" stroke-width="1.8"/><path d="M4 10h16M8 3v4M16 3v4" stroke="#1B4B66" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="rlabel">Daily schedule</span>
+        <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#667085" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="feature-row" href="nearest-stop.html">
+        <span class="ric"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="#1B4B66" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.3" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <span class="rlabel">Nearest stop</span>
+        <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#667085" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="feature-row" href="notifications.html">
+        <span class="ric"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M18 16v-5a6 6 0 0 0-4-5.66V4a2 2 0 0 0-4 0v1.34A6 6 0 0 0 6 11v5l-1.5 2h15L18 16Z" stroke="#1B4B66" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 20a2 2 0 0 0 4 0" stroke="#1B4B66" stroke-width="1.8"/></svg></span>
+        <span class="rlabel">Notifications</span>
+        <span class="badge" id="notif-badge">0</span>
+        <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#667085" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+
+    <p class="sec-title">More</p>
+    <div class="tiles">
+      <a class="tile" href="tel:112">
+        <span class="tic2">&#128222;</span><b>Emergency</b><span class="ts">Call for help</span>
+      </a>
+      <button class="tile" onclick="alert('Report a problem: describe the issue and we will notify the transport desk.')">
+        <span class="tic2">&#9888;</span><b>Report a problem</b><span class="ts">Delay, safety, lost item</span>
+      </button>
+      <button class="tile" onclick="alert('Bus details: Shuttle 1 · Driver contact shown here once assigned.')">
+        <span class="tic2">&#128652;</span><b>Bus &amp; driver</b><span class="ts">Vehicle information</span>
+      </button>
+      <button class="tile" onclick="alert('Share my ride: a live-tracking link would be sent to your contact.')">
+        <span class="tic2">&#128279;</span><b>Share my ride</b><span class="ts">Send live tracking</span>
+      </button>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+  initLiveClock('clock');
+  initHomeLive();
+  initHomeNotifs('toast','notif-badge');
+</script>
+</body>
+</html>

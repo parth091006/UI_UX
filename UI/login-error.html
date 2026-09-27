@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Log in</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span>9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <button class="iconbtn" onclick="window.location.href='login.html'" aria-label="Back to login">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Log in</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="error-banner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0; margin-top:1px;"><circle cx="12" cy="12" r="9" stroke="#C2483D" stroke-width="1.8"/><path d="M12 8v5" stroke="#C2483D" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#C2483D"/></svg>
+      <span>Incorrect mobile number or password. Please try again.</span>
+    </div>
+
+    <form class="content" style="padding:0; gap:16px;" onsubmit="event.preventDefault(); checkLogin('1234567890', document.getElementById('pass').value, '1234567890', 'vushuttle', 'home.html', 'login-error.html');">
+      <div class="field">
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" type="tel" value="1234567890" readonly>
+      </div>
+      <div class="field error">
+        <label for="pass">Password</label>
+        <input id="pass" type="password" placeholder="Enter your password" autofocus>
+        <span class="field-note">Only your password needs to be re-entered.</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Log in</button>
+    </form>
+
+    <p class="footer-note">
+      <a class="link-quiet" href="login.html">&larr; Back to login</a>
+    </p>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

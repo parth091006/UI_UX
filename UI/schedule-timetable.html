@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VU Shuttle — Timetable</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="statusbar">
+    <span id="clock">9:41</span>
+    <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+
+  <div class="topbar" style="align-items:center;">
+    <button class="iconbtn" onclick="window.location.href='schedule.html'" aria-label="Back to schedule">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="topbar-text">
+      <p class="brand">VU Shuttle</p>
+      <p class="page-title">Timetable</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="trip-header">
+      <h2 id="trip-title">Morning Bus</h2>
+      <p id="trip-sub">Departs Karjat Railway Station at 8:00 AM</p>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+<script>
+  initLiveClock('clock');
+  renderTimetable('timeline', 'trip-title', 'trip-sub');
+</script>
+</body>
+</html>
